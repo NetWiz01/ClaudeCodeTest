@@ -15,13 +15,20 @@ Or double-click from Explorer. There are no dependencies, servers, or install st
 
 ## Git Workflow
 
-Commit and push to GitHub after every meaningful change:
+**Commit and push after every meaningful unit of work** — a completed feature, a bug fix, a refactor. Do not batch multiple unrelated changes into one commit. This ensures work is never lost and any change can be reverted cleanly.
 
 ```bash
 git add <specific-files>
-git commit -m "short description"
+git commit -m "concise present-tense summary
+
+Optional body explaining why, not just what."
 git push
 ```
+
+- Stage specific files by name — never `git add -A` or `git add .`
+- Commit messages: short subject line (≤72 chars), present tense, no period
+- Always push immediately after committing — local-only commits defeat the purpose
+- If `gh auth` causes a push failure, run `gh auth setup-git` then retry
 
 Remote: `https://github.com/NetWiz01/ClaudeCodeTest` (branch: `main`)
 
